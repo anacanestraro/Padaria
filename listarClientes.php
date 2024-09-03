@@ -8,7 +8,7 @@
 
     $cliente = new Cliente($conexao);
     $stmt = $cliente->read();
-    $clientes = $stmt->fethcAll(PDO::FETCH_ASSOC);
+    $clientes = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 ?>
 
@@ -40,14 +40,14 @@
                 <td><?php echo $cliente['cpf']; ?></td>
 
                 <td>
-                    <a href="form_atualizaCliente.php?id=<?php echo $cliente['id'];?>">Editar</a>
+                    <a href="form_atualizarCliente.php?id=<?php echo $cliente['id'];?>">Editar</a>
                     <a href="deletarCliente.php?id=<?php echo $cliente['id'];?>">Excluir</a>
                 </td>
             </tr>
         <?php } ?>
     </table>
 
-    <a href="form cadastroCliente.php">Cadastrar Novo Cliente</a>
-    
+    <a href="form_cadastroCliente.php">Cadastrar Novo Cliente</a>
+
 </body>
 </html>
