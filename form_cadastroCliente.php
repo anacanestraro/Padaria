@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./css/style.css" />
 </head>
 <body>
+    <!--Formulário para cadastro de um cliente -->
     <div class="d-flex vh-100 justify-content-center align-items-center">
         <div class="container">
             <div class="card">

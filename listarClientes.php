@@ -3,12 +3,12 @@
     require("Banco.php");
     require("Cliente.php");
 
-    $banco = new Banco();
-    $conexao = $banco->getConexao();
+    $banco = new Banco(); // Instacia um objeto da classe Banco
+    $conexao = $banco->getConexao(); // Atribui à variável conexão a conexão do objeto banco
 
-    $cliente = new Cliente($conexao);
-    $stmt = $cliente->read();
-    $clientes = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    $cliente = new Cliente($conexao); // Instancia um objeto da classe cliente passsando conexao como parâmetro
+    $stmt = $cliente->read();  // Atribui à variável stmt o resultado do método read que é responsável por executar a query que seleciona todos os clientes da tabela
+    $clientes = $stmt->fetchAll(PDO::FETCH_ASSOC); // Atribui à variável clientes os dados recuperado pelo fetchAll que retorna os resultados em um array associativo
 
 ?>
 
@@ -21,6 +21,7 @@
     <title>Lista de Clientes</title>
 </head>
 <body>
+<!-- Listar os clientes -->
     <h2>Lista de Clientes</h2>
 
     <table border="1">
